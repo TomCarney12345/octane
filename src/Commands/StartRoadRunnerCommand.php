@@ -238,7 +238,7 @@ class StartRoadRunnerCommand extends Command implements SignalableCommandInterfa
                     return $this->raw($debug['msg']);
                 }
 
-                if ($debug['level'] == 'info'
+                if (Str::lower($debug['level']) == 'info'
                     && isset($debug['remote_address'])
                     && isset($debug['msg'])
                     && $debug['msg'] == 'http log') {
